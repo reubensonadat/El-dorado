@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El-Dorado Luxury Hiring Services - Premium Van Rental</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Header text changed to black using Tailwind's 'text-black' class -->
+            <a href="#" class="text-2xl font-['Pacifico'] text-black">El-Dorado</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-primary font-medium hover:text-secondary transition-colors">Home</a>
+                <a href="#services" class="text-gray-700 font-medium hover:text-primary transition-colors">Services</a>
+                <a href="#about" class="text-gray-700 font-medium hover:text-primary transition-colors">About</a>
+                <a href="#contact" class="text-gray-700 font-medium hover:text-primary transition-colors">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden w-10 h-10 flex items-center justify-center text-primary">
+                <i class="ri-menu-line ri-lg"></i>
+            </button>
+            <a href="#contact" class="hidden md:block bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Book Now</a>
+        </div>
+    </header>
+
+    <!-- Mobile Menu (Hidden by default) -->
+    <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-white z-40 flex flex-col items-center justify-center space-y-8">
+        <button id="close-mobile-menu" class="absolute top-4 right-4 text-primary text-3xl">
+            <i class="ri-close-line"></i>
+        </button>
+        <a href="#" class="text-primary font-medium text-2xl hover:text-secondary transition-colors">Home</a>
+        <a href="#services" class="text-gray-700 font-medium text-2xl hover:text-primary transition-colors">Services</a>
+        <a href="#about" class="text-gray-700 font-medium text-2xl hover:text-primary transition-colors">About</a>
+        <a href="#contact" class="text-gray-700 font-medium text-2xl hover:text-primary transition-colors">Contact</a>
+        <a href="#contact" class="bg-primary text-white px-6 py-2 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap text-xl">Book Now</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative h-[600px] flex items-center" style="background-image: url('bus\ \(2\).jpg'); background-size: cover; background-position: center;">
+        <!-- Adjusted the gradient overlay for better text visibility -->
+        <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-2xl text-white">
+                <h1 class="text-5xl md:text-6xl font-bold mb-4 leading-tight">Travel Together, Effortlessly!</h1>
+                <p class="text-xl mb-8">Experience premium group transportation with our luxury van rental service.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#services" class="bg-white text-primary px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors text-center whitespace-nowrap">Our Services</a>
+                    <a href="#contact" class="bg-secondary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors text-center whitespace-nowrap">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary">Welcome to El-Dorado Luxury Hiring Services</h2>
+                <p class="text-lg text-gray-700 mb-8 leading-relaxed">Your trusted partner for safe and comfortable group travel. We offer a premium van rental service, perfect for all your transportation needs. With years of experience in the transportation industry, we pride ourselves on providing reliable, comfortable, and safe travel solutions for groups of all sizes.</p>
+                <div class="flex justify-center">
+                    <a href="#contact" class="bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section id="services" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-primary">Who We Help</h2>
+                <p class="text-lg text-gray-700 max-w-2xl mx-auto">Whether it's a school trip, an organizational outing, a church event, or any group excursion, our well-maintained van ensures a safe and effortless journey every time.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Schools -->
+                <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full mb-6">
+                        <i class="ri-school-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-primary">Schools</h3>
+                    <p class="text-gray-700">Safe transportation for field trips, sports events, and educational excursions. We ensure students travel in comfort and security.</p>
+                </div>
+                
+                <!-- Organizations -->
+                <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full mb-6">
+                        <i class="ri-building-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-primary">Organizations</h3>
+                    <p class="text-gray-700">Corporate retreats, team-building events, or business travel. We provide professional transportation services for your organization.</p>
+                </div>
+                
+                <!-- Churches -->
+                <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full mb-6">
+                        <i class="ri-church-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-primary">Churches</h3>
+                    <p class="text-gray-700">Reliable transportation for church outings, mission trips, and community service events. Travel together as a congregation.</p>
+                </div>
+                
+                <!-- Groups -->
+                <div class="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 flex items-center justify-center bg-primary/10 rounded-full mb-6">
+                        <i class="ri-group-line ri-2x text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-primary">Groups</h3>
+                    <p class="text-gray-700">Family reunions, friend getaways, or special events. Our van is perfect for any group looking to travel together comfortably.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <img src="bus (4).jpg" alt="Van Interior" class="rounded-lg shadow-lg w-full h-auto object-cover">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-primary">The El-Dorado Difference</h2>
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">Our single, well-maintained van ensures a safe and effortless journey every time. We pride ourselves on providing exceptional service with a focus on safety, comfort, and reliability.</p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4 mt-1 flex-shrink-0">
+                                <i class="ri-shield-check-line text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-gray-900">Safety First</h3>
+                                <p class="text-gray-700">Regular maintenance and safety checks ensure our van meets the highest safety standards.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4 mt-1 flex-shrink-0">
+                                <i class="ri-user-star-line text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-gray-900">Professional Service</h3>
+                                <p class="text-gray-700">Experienced drivers and attentive customer service for a seamless experience.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4 mt-1 flex-shrink-0">
+                                <i class="ri-heart-line text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-semibold mb-2 text-gray-900">Comfort & Convenience</h3>
+                                <p class="text-gray-700">Spacious seating, climate control, and modern amenities for a comfortable journey.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="inline-block bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Book Your Trip</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-primary">What Our Clients Say</h2>
+                <p class="text-lg text-gray-700 max-w-2xl mx-auto">Don't just take our word for it. Here's what some of our satisfied customers have to say about their experience with El-Dorado Luxury Hiring Services.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="text-secondary">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">"Our school has used El-Dorado for multiple field trips, and they've always provided exceptional service. The van is clean, comfortable, and the driver is always professional. Highly recommended!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-primary font-bold">EM</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900">Emmanuel Mensah</h4>
+                            <p class="text-sm text-gray-600">School Administrator</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="text-secondary">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">"We hired El-Dorado for our church retreat, and it was a wonderful experience. The van was spacious, the journey was smooth, and the driver was courteous. We'll definitely be using their services again!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-primary font-bold">GA</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900">Grace Asamoah</h4>
+                            <p class="text-sm text-gray-600">Church Coordinator</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="text-secondary">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6">"Our company used El-Dorado for a team-building retreat, and everything was perfect. The booking process was easy, the van was comfortable, and the driver was punctual and professional. Excellent service!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-primary font-bold">KO</span>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900">Kwame Osei</h4>
+                            <p class="text-sm text-gray-600">HR Manager</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-primary">Contact Us</h2>
+                <p class="text-lg text-gray-700 max-w-2xl mx-auto">Ready to book our premium van service? Get in touch with us today to discuss your transportation needs.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <div class="bg-white rounded-lg shadow-lg p-8">
+                        <h3 class="text-2xl font-bold mb-6 text-primary">Send Us a Message</h3>
+                        <form id="contactForm">
+                            <div class="mb-6">
+                                <label for="clientName" class="block text-gray-700 font-medium mb-2">Name</label>
+                                <input type="text" id="clientName" name="clientName" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Your name" required>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="clientPhoneNumber" class="block text-gray-700 font-medium mb-2">Phone Number</label>
+                                <input type="tel" id="clientPhoneNumber" name="clientPhoneNumber" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Your phone number" required>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="eventDate" class="block text-gray-700 font-medium mb-2">Date of Event</label>
+                                <input type="date" id="eventDate" name="eventDate" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
+                            </div>
+
+                            <div class="mb-6">
+                                <label for="eventLocation" class="block text-gray-700 font-medium mb-2">Location of Event</label>
+                                <input type="text" id="eventLocation" name="eventLocation" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" placeholder="e.g., Legon Garderns, Elmina castle" required>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="otherInfo" class="block text-gray-700 font-medium mb-2">Other Information</label>
+                                <textarea id="otherInfo" name="otherInfo" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Any other details or specific needs"></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors whitespace-nowrap">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                        <h3 class="text-2xl font-bold mb-6 text-primary">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4 mt-1 flex-shrink-0">
+                                    <i class="ri-map-pin-line text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Address</h4>
+                                    <p class="text-gray-700">Lakeside Estate Community 1, Accra, Ghana</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4 mt-1 flex-shrink-0">
+                                    <i class="ri-phone-line text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Phone</h4>
+                                    <p class="text-gray-700">0243270509 / 0541651298</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 flex items-center justify-center bg-primary/10 rounded-full mr-4 mt-1 flex-shrink-0">
+                                    <i class="ri-time-line text-primary"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-900 mb-1">Business Hours</h4>
+                                    <p class="text-gray-700">Monday - Friday: 8:00 AM - 6:00 PM<br>Saturday & Sunday: 5:00 AM - 7:00 PM<br></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                   
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden h-80">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3773.681495727626!2d-0.13556692525383957!3d5.695838994285916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zNcKwNDEnNDUuMCJOIDDCsDA3JzU4LjgiVw!5e1!3m2!1sen!2sgh!4v1750971558150!5m2!1sen!2sgh" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Experience Comfortable Group Travel?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Rent our van for all your safe travels and experience the El-Dorado difference. Book today for your next group journey!</p>
+            <a href="#contact" class="inline-block bg-white text-primary px-8 py-3 !rounded-button font-medium hover:bg-gray-100 transition-colors whitespace-nowrap">Book Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 font-['Pacifico']">El-Dorado</h3>
+                    <p class="text-gray-400 mb-4">Your trusted partner for safe and comfortable group travel in Ghana.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="https://wa.me/+233243270509" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-whatsapp-line"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">School Trips</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Corporate Events</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Church Outings</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">Group Excursions</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="ri-map-pin-line mr-2 mt-1"></i>
+                            <span class="text-gray-400">Lakeside Estate Community 1, Accra, Ghana</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-phone-line mr-2 mt-1"></i>
+                            <span class="text-gray-400">0243270509 / 0541651298</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="ri-time-line mr-2 mt-1"></i>
+                            <span class="text-gray-400">Mon-Fri: 8AM-6PM, Sat: 9AM-4PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-gray-800 text-center text-gray-400">
+                <p>&copy; 2025 El-Dorado Luxury Hiring Services. All rights reserved.</p>
+                <div class="mt-4 flex justify-center space-x-6">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Message Box Overlay -->
+    <div id="messageBoxOverlay" class="message-box-overlay">
+        <div class="message-box-content">
+            <h3 class="text-2xl font-bold mb-4 text-primary">Message Sent!</h3>
+            <p class="text-gray-700 mb-6">Your message has been sent successfully. We will get back to you shortly.</p>
+            <button id="closeMessageBox" class="w-full bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-opacity-90 transition-colors">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

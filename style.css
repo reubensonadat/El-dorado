@@ -1,0 +1,77 @@
+/* style.css */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Pacifico&display=swap');
+
+/* Base font for the body */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Custom font for specific elements like the header logo */
+.font {
+    font-family: 'Pacifico', cursive;
+}
+
+/* Custom color definitions, applied using Tailwind classes */
+.text-primary {
+    color: #1a73e8; /* A shade of blue */
+}
+.bg-primary {
+    background-color: #1a73e8;
+}
+.hover\:bg-primary:hover {
+    background-color: #1a73e8;
+}
+.focus\:ring-primary:focus {
+    --tw-ring-color: #1a73e8;
+}
+
+.text-secondary {
+    color: #e88d1a; /* A shade of orange */
+}
+.bg-secondary {
+    background-color: #e88d1a;
+}
+
+/* Custom utility class for fully rounded buttons */
+.\!rounded-button {
+    border-radius: 9999px; /* Full rounded */
+}
+
+/* Message Box specific styles */
+.message-box-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s linear;
+}
+
+.message-box-overlay.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.message-box-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease-out;
+}
+
+.message-box-overlay.visible .message-box-content {
+    transform: translateY(0);
+}
