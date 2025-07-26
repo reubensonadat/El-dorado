@@ -75,3 +75,21 @@ body {
 .message-box-overlay.visible .message-box-content {
     transform: translateY(0);
 }
+
+.transparent{
+    background: transparent !important;
+}
+
+.hero-section-bg {
+    background-size: cover;
+    background-position: center;
+    /* Default background for mobile (small screens) */
+    background-image: url('images/bus\ \(2\).jpg'); 
+}
+
+/* Medium screens (md) and larger */
+@media (max-width: 426px) {
+    .hero-section-bg {
+        background-image: url('images/bus\ \(5\).jpg'); /* Replace with your desktop image */
+    }
+}
