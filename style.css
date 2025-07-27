@@ -84,12 +84,46 @@ body {
     background-size: cover;
     background-position: center;
     /* Default background for mobile (small screens) */
-    background-image: url('images/bus\ \(2\).jpg'); 
+    background-image: url('images/bus (2).jpg'); 
 }
 
 /* Medium screens (md) and larger */
-@media (max-width: 426px) {
+@media (min-width: 768px) {
     .hero-section-bg {
-        background-image: url('images/bus\ \(5\).jpg'); /* Replace with your desktop image */
+        background-image: url('images/bus (5).jpg'); /* Replace with your desktop image */
     }
+}
+
+/* --- Animations and Transitions --- */
+.service-card, .testimonial-card, .gallery-grid > div {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover, .testimonial-card:hover, .gallery-grid > div:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Scroll Animation */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- FAQ Accordion --- */
+.faq-question.active i {
+    transform: rotate(180deg);
+}
+
+/* --- Fuel Calculator --- */
+.fuel-calculator-result {
+    color: #1a73e8; /* Use primary color for emphasis */
+    min-height: 2rem; /* Prevent layout shift when text appears */
+    transition: color 0.3s ease;
 }

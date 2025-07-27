@@ -67,7 +67,9 @@ document.addEventListener('DOMContentLoaded', () => {
             window.open(whatsappUrl, '_blank');
 
             // Show custom message box
-            messageBoxOverlay.classList.add('visible');
+            if (messageBoxOverlay) {
+                messageBoxOverlay.classList.add('visible');
+            }
 
             // Clear the form fields after submission
             this.reset();
@@ -87,6 +89,121 @@ document.addEventListener('DOMContentLoaded', () => {
             if (event.target === messageBoxOverlay) {
                 messageBoxOverlay.classList.remove('visible');
             }
+        });
+    }
+
+    // --- Scroll Animations using Intersection Observer ---
+    const scrollElements = document.querySelectorAll('.animate-on-scroll');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target); // Stop observing once the animation is triggered
+            }
+        });
+    }, {
+        threshold: 0.1 // Trigger when 10% of the element is visible
+    });
+
+    scrollElements.forEach(el => {
+        observer.observe(el);
+    });
+
+
+    // --- Image Gallery Modal ---
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    const closeModalBtn = document.getElementById('closeModal');
+
+    if (modal && modalImg && closeModalBtn) {
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                modalImg.src = item.src;
+                document.body.style.overflow = 'hidden'; // Prevent background scroll
+            });
+        });
+
+        const closeModal = () => {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = ''; // Restore background scroll
+        };
+
+        closeModalBtn.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', (e) => {
+            // Close modal if the overlay is clicked, but not the content inside
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+    }
+
+
+    // --- FAQ Accordion ---
+    const accordionItems = document.querySelectorAll('.faq-question');
+
+    accordionItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const currentlyActive = document.querySelector('.faq-question.active');
+            // Collapse the currently open item if it's not the one being clicked
+            if (currentlyActive && currentlyActive !== item) {
+                currentlyActive.classList.remove('active');
+                currentlyActive.setAttribute('aria-expanded', 'false');
+                currentlyActive.nextElementSibling.style.maxHeight = 0;
+            }
+
+            // Toggle the clicked item
+            item.classList.toggle('active');
+            const answer = item.nextElementSibling;
+            
+            if (item.classList.contains('active')) {
+                item.setAttribute('aria-expanded', 'true');
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            } else {
+                item.setAttribute('aria-expanded', 'false');
+                answer.style.maxHeight = 0;
+            }
+        });
+    });
+
+    // --- Fuel Cost Calculator ---
+    const calculateFuelBtn = document.getElementById('calculateFuelBtn');
+    if (calculateFuelBtn) {
+        calculateFuelBtn.addEventListener('click', () => {
+            const distanceInput = document.getElementById('distanceInput');
+            const fuelCostResult = document.getElementById('fuelCostResult');
+            
+            const distance = parseFloat(distanceInput.value);
+
+            if (isNaN(distance) || distance <= 0) {
+                fuelCostResult.textContent = 'Please enter a valid distance.';
+                fuelCostResult.style.color = '#ef4444'; // Red color for error
+                return;
+            }
+
+            // Constants for calculation
+            const fuelEfficiency = 8.5; // Average km per liter for a 2019 Ford Transit 350
+            const fuelPricePerLiter = 14.50; // Estimated price in GHS (Ghana Cedis)
+
+            // Calculation
+            const neededLiters = distance / fuelEfficiency;
+            const totalCost = neededLiters * fuelPricePerLiter;
+
+            // Display result
+            fuelCostResult.style.color = '#1a73e8'; // Reset to primary color
+            fuelCostResult.textContent = `Estimated Fuel Cost: GHS ${totalCost.toFixed(2)}`;
         });
     }
 });
