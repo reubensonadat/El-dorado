@@ -1,0 +1,12 @@
+# Netlify Redirects Configuration
+
+# This file replaces the functionality of .htaccess for Netlify deployments.
+# Netlify automatically handles HTTPS for custom domains, so no rule is needed for that.
+
+# Your canonical URL in index.html is non-www (https://el-doradoluxury.netlify.app/).
+# Therefore, we are NOT adding a rule to force www.
+
+# This rule handles "clean URLs" or acts as a fallback for single-page applications (SPAs).
+# If a requested path doesn't match an existing file or directory, it will serve index.html.
+# This is similar to the 'RewriteRule ^ index.html [L]' from your .htaccess.
+/* /index.html   200
