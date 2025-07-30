@@ -88,7 +88,7 @@ body {
 }
 
 /* Medium screens (md) and larger */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .hero-section-bg {
         background-image: url('images/bus (5).jpg'); /* Replace with your desktop image */
     }
